@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1405527846 source:d:\andre\pesquisa\publicações\livros\livro estutura de dados em c\códigos\projarvorebinaria\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreBinaria.h"
+
+1400694042 aria.h"
+
+1405527956 d:\andre\pesquisa\publicações\livros\livro estutura de dados em c\códigos\projarvorebinaria\arvorebinaria.h
+
+1400694042 source:d:\andre\pesquisa\publicações\livros\livro estutura de dados em c\códigos\projarvorebinaria\arvorebinaria.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreBinaria.h"
+
+1491661215 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/ProjArvoreBinaria/ArvoreBinaria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArvoreBinaria.h"
+
+1491611249 /home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/ProjArvoreBinaria/ArvoreBinaria.h
+
+1491666028 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/ProjArvoreBinaria/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreBinaria.h"
+	<string.h>
+
