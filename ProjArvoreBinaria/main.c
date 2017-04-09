@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "ArvoreBinaria.h"
 #include <string.h>
+#include <ctype.h>
 int zeraString(char string[], int tam){
     int i=0;
     for(i=0;i<tam+1;i++)
@@ -13,8 +14,9 @@ int main()
 {
 
     int tmp;
-    const char fim[3]= "\0";
-    char *palavra[21],aux[21];
+     ArvBin palavra;
+    //const char fim[3]= "\0";
+    char aux[21];
     ArvBin* raiz = cria_ArvBin();
     FILE *entrada = fopen("entrada.txt","r");
 
@@ -30,7 +32,7 @@ int main()
                 tmp=tmp+32;
                 }
             aux[i]=tmp;
-            printf("aux:%c eh tmp=%d\n",aux[i],tmp);
+            //printf("aux:%c eh tmp=%d\n",aux[i],tmp);
             tmp =fgetc(entrada);
             if(tmp == EOF) //fim do arquivo
                 break;
@@ -39,18 +41,18 @@ int main()
 
         aux[i]='\0';
         //printf("aux:%s\n",aux);
-        *palavra = strtok(aux,fim);
-        //strcpy(palavra,aux);
+//        *palavra = strtok(aux,fim);
+        strcpy(palavra->info,aux);
 
-        insere_ArvBin(raiz,*palavra);
+        insere_ArvBin(raiz,palavra->info);
 
        // printf("palavra:%s     aux:%s\n",palavra,aux);
 
     }
-    zeraString(*palavra,21);
-    zeraString(aux,21);
+    //zeraString(*palavra,21);
+    //zeraString(aux,21);
     //preOrdem_ArvBin(raiz);
-    //emOrdem_ArvBin(raiz);
+    emOrdem_ArvBin(raiz);
     //posOrdem_ArvBin(raiz);
 
 
