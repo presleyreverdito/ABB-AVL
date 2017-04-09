@@ -1,4 +1,5 @@
-
+#include<stdlib.h>
+#include<stdio.h>
 typedef struct NO* ArvBin;
 
 ArvBin* cria_ArvBin();

@@ -6,7 +6,7 @@
 struct NO
 {
     int cont;
-    char info[21];
+    char *info;
     struct NO *esq;
     struct NO *dir;
 };
@@ -42,11 +42,14 @@ int insere_ArvBin(ArvBin* raiz, char str[])
     int comp;
     if(raiz == NULL)
         return 0;
-    struct NO* novo;
-    novo = (struct NO*) malloc(sizeof(struct NO));
+    struct NO* novo = malloc(sizeof(struct NO));
+
     if(novo == NULL)
         return 0;
-    strcpy(novo->info,str);
+
+    //strcpy(novo->info,str);
+    novo->info = str;
+
     novo->cont = 1;
     novo->dir = NULL;
     novo->esq = NULL;
@@ -87,6 +90,7 @@ struct NO* remove_atual(struct NO* atual)
     if(atual->esq == NULL)
     {
         no2 = atual->dir;
+        free(atual->info);
         free(atual);
         return no2;
     }
@@ -105,6 +109,7 @@ struct NO* remove_atual(struct NO* atual)
         no2->esq = atual->esq;
     }
     no2->dir = atual->dir;
+    free(atual->info);
     free(atual);
     return no2;
 }
@@ -211,7 +216,7 @@ void emOrdem_ArvBin(ArvBin *raiz)
     if(*raiz != NULL)
     {
         emOrdem_ArvBin(&((*raiz)->esq));
-        printf("%s    quantidade:%d\n",(*raiz)->info,(*raiz)->cont);
+        printf("%s  quantidade:%d\n",(*raiz)->info,(*raiz)->cont);
         emOrdem_ArvBin(&((*raiz)->dir));
     }
 }
