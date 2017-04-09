@@ -25,6 +25,7 @@ void libera_NO(struct NO* no)
         return;
     libera_NO(no->esq);
     libera_NO(no->dir);
+	free(no->info);
     free(no);
     no = NULL;
 }
@@ -43,15 +44,14 @@ int consultaIncrementa_ArvBin(ArvBin *raiz, char str[])
     struct NO* atual = *raiz;
     while(atual != NULL)
     {
-        //printf("%s %s\n",str,atual->info);
+       
         if(strcmp(str,atual->info) == 0)
         {
-           // printf("STR = %s\n\n",str);
+			free(str);
             atual->cont++;
             return 1;
         }
         if(strcmp(str,atual->info) > 0)
-        //if(str > atual->info)
             atual = atual->dir;
         else
             atual = atual->esq;
@@ -69,7 +69,7 @@ int insere_ArvBin(ArvBin* raiz, char str[])
     if(novo == NULL)
         return 0;
 
-    //strcpy(novo->info,str);
+    
     novo->info = str;
     novo->cont = 1;
     novo->dir = NULL;

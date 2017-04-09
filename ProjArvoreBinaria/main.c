@@ -20,7 +20,6 @@ char *devolvePalavra(char palavra[]){
         aux[i] = palavra[i];
     }
     aux[i] = palavra[i];
-    //printf("%s\n",aux);
     return aux;
 }
 int main()
