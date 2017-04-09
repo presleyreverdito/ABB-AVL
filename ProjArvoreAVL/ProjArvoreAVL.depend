@@ -4,6 +4,8 @@
 	<stdlib.h>
 	"ArvoreAVL.h"
 
+1435255910 .h"
+
 1406222000 d:\andre\pesquisa\publicações\livros\livro estutura de dados em c\códigos\projarvoreavl\arvoreavl.h
 
 1406222026 source:d:\andre\pesquisa\publicações\livros\livro estutura de dados em c\códigos\projarvoreavl\arvoreavl.c
@@ -36,4 +38,19 @@
 	<stdio.h>
 	<stdlib.h>
 	"ArvoreAVL.h"
+
+1491751263 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreAVL/ArvoreAVL.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreAVL.h"
+	<string.h>
+
+1491726644 /home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreAVL/ArvoreAVL.h
+
+1491750570 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreAVL/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArvoreAVL.h"
+	<time.h>
+	<locale.h>
 
