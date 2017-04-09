@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include "ArvoreBinaria.h"
 #include <string.h>
+
 #include<locale.h>
+
 int zeraString(char string[], int tam){
     int i=0;
     for(i=0;i<tam+1;i++)
@@ -24,7 +26,14 @@ char *devolvePalavra(char palavra[]){
 int main()
 {
     int tmp;
+<<<<<<< HEAD
     char palavra[21], aux[21];
+=======
+
+     ArvBin palavra;
+    //const char fim[3]= "\0";
+    char aux[21];
+>>>>>>> origin/master
 
     ArvBin* raiz = cria_ArvBin();
     FILE *entrada = fopen("entrada.txt","r");
@@ -44,6 +53,41 @@ int main()
             i = -1;
         }
     }
+<<<<<<< HEAD
+=======
+    /*while(!feof(entrada) && !ferror(entrada))
+    {
+        // ate o fim do arquivo
+
+        tmp = fgetc(entrada); // lendo dados
+
+        while((tmp != ' ') && (tmp != ',') && (tmp != ';') && (tmp != '.') && (tmp !='\n') && (tmp !='\0') && (tmp !='?') && (tmp !='!')) //condicoes para pegar as palavras
+        {
+            if(tmp>=65 &&tmp<91){
+                tmp=tmp+32;
+                }
+            aux[i]=tmp;
+            //printf("aux:%c eh tmp=%d\n",aux[i],tmp);
+            tmp =fgetc(entrada);
+            if(tmp == EOF) //fim do arquivo
+                break;
+            i++;
+        }
+
+        aux[i]='\0';
+        printf("%s\n",aux);
+        //printf("aux:%s\n",aux);
+//        *palavra = strtok(aux,fim);
+        strcpy(palavra->info,aux);
+
+        insere_ArvBin(raiz,palavra->info);
+
+       // printf("palavra:%s     aux:%s\n",palavra,aux);
+
+
+    }*/
+>>>>>>> origin/master
+
 
     //preOrdem_ArvBin(raiz);
     emOrdem_ArvBin(raiz);
