@@ -11,13 +11,14 @@ char *devolvePalavra(char palavra[]){
         aux[i] = palavra[i];
     }
     aux[i] = palavra[i];
-    //printf("%s\n",aux);
     return aux;
 }
 int main()
 {
+
     int tmp, i;
     char aux[21];
+
     ArvAVL* avl;
     avl = cria_ArvAVL();
     FILE *entrada = fopen("entrada.txt","r");
