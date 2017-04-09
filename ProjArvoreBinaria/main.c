@@ -23,20 +23,15 @@ char *devolvePalavra(char palavra[]){
 }
 int main()
 {
-
     int tmp;
-    const char fim[3]= "\0";
-    char palavra[21];
-    char aux[21];
-    //char *palavra[21],aux[21];
+    char palavra[21], aux[21];
+
     ArvBin* raiz = cria_ArvBin();
     FILE *entrada = fopen("entrada.txt","r");
     setlocale(LC_ALL, "Portuguese");
 
-
     int i=0,j;
     for(i = 0, tmp = getc(entrada); tmp != EOF; i++, tmp = getc(entrada)){
-
         if((tmp != ' ') && (tmp != ',') && (tmp != ';') && (tmp != '.') && (tmp !='\n') && (tmp !='\0') && (tmp !='?') && (tmp !='!')){
             if(tmp>=65 &&tmp<91)
                 tmp=tmp+32;
@@ -49,42 +44,10 @@ int main()
             i = -1;
         }
     }
-    /*while(!feof(entrada) && !ferror(entrada))
-    {
-        // ate o fim do arquivo
-
-        tmp = fgetc(entrada); // lendo dados
-
-        while((tmp != ' ') && (tmp != ',') && (tmp != ';') && (tmp != '.') && (tmp !='\n') && (tmp !='\0') && (tmp !='?') && (tmp !='!')) //condicoes para pegar as palavras
-        {
-            if(tmp>=65 &&tmp<91){
-                tmp=tmp+32;
-                }
-            aux[i]=tmp;
-            printf("aux:%c eh tmp=%d\n",aux[i],tmp);
-            tmp =fgetc(entrada);
-            if(tmp == EOF) //fim do arquivo
-                break;
-            i++;
-        }
-
-        aux[i]='\0';
-        printf("%s\n",aux);
-        //printf("aux:%s\n",aux);
-        *palavra = strtok(aux,fim);
-        //strcpy(palavra,aux);
-
-        insere_ArvBin(raiz,*palavra);
-
-       // printf("palavra:%s     aux:%s\n",palavra,aux);
-
-    }*/
 
     //preOrdem_ArvBin(raiz);
     emOrdem_ArvBin(raiz);
     //posOrdem_ArvBin(raiz);
-
-
 
     fclose(entrada);
     libera_ArvBin(raiz);
