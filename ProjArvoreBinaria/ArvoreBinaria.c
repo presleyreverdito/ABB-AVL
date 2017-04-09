@@ -36,12 +36,34 @@ void libera_ArvBin(ArvBin* raiz)
     libera_NO(*raiz);//libera cada nó
     free(raiz);//libera a raiz
 }
-
+int consultaIncrementa_ArvBin(ArvBin *raiz, char str[])
+{
+    if(raiz == NULL)
+        return 0;
+    struct NO* atual = *raiz;
+    while(atual != NULL)
+    {
+        //printf("%s %s\n",str,atual->info);
+        if(strcmp(str,atual->info) == 0)
+        {
+           // printf("STR = %s\n\n",str);
+            atual->cont++;
+            return 1;
+        }
+        if(strcmp(str,atual->info) > 0)
+        //if(str > atual->info)
+            atual = atual->dir;
+        else
+            atual = atual->esq;
+    }
+    return 0;
+}
 int insere_ArvBin(ArvBin* raiz, char str[])
 {
     int comp;
     if(raiz == NULL)
         return 0;
+    if(consultaIncrementa_ArvBin(raiz, str) == 0){
     struct NO* novo = malloc(sizeof(struct NO));
 
     if(novo == NULL)
@@ -49,7 +71,6 @@ int insere_ArvBin(ArvBin* raiz, char str[])
 
     //strcpy(novo->info,str);
     novo->info = str;
-
     novo->cont = 1;
     novo->dir = NULL;
     novo->esq = NULL;
@@ -64,12 +85,7 @@ int insere_ArvBin(ArvBin* raiz, char str[])
         {
             ant = atual;
             comp=strcmp(str,atual->info);
-            if((comp=0))
-            {
-                atual->cont++;
-                free(novo);
-                return 0;//elemento já existe
-            }
+
 
             if(comp>0)
                 atual = atual->dir;
@@ -81,7 +97,9 @@ int insere_ArvBin(ArvBin* raiz, char str[])
         else
             ant->esq = novo;
     }
+    }
     return 1;
+
 }
 
 struct NO* remove_atual(struct NO* atual)
@@ -216,7 +234,7 @@ void emOrdem_ArvBin(ArvBin *raiz)
     if(*raiz != NULL)
     {
         emOrdem_ArvBin(&((*raiz)->esq));
-        printf("%s  quantidade:%d\n",(*raiz)->info,(*raiz)->cont);
+        printf("%s Qtd:%d\n",(*raiz)->info,(*raiz)->cont);
         emOrdem_ArvBin(&((*raiz)->dir));
     }
 }

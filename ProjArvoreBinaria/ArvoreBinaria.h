@@ -13,4 +13,5 @@ int consulta_ArvBin(ArvBin *raiz, char str[]);
 void preOrdem_ArvBin(ArvBin *raiz);
 void emOrdem_ArvBin(ArvBin *raiz);
 void posOrdem_ArvBin(ArvBin *raiz);
+int consultaIncrementa_ArvBin(ArvBin *raiz, char str[]);
 
