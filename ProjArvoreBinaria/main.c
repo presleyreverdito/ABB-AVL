@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "ArvoreBinaria.h"
 #include <string.h>
-
+#include<time.h>
 #include<locale.h>
 
 int zeraString(char string[], int tam){
@@ -30,6 +30,9 @@ int main()
     ArvBin* raiz = cria_ArvBin();
     FILE *entrada = fopen("entrada.txt","r");
     setlocale(LC_ALL, "Portuguese");
+    clock_t tempo_i, tempo_f;
+    srand(time(NULL));
+    tempo_i = clock();
 
     for(i = 0, tmp = getc(entrada); tmp != EOF; i++, tmp = getc(entrada)){
         if((tmp != ' ') && (tmp != ',') && (tmp != ';') && (tmp != '.') && (tmp !='\n') && (tmp !='\0') && (tmp !='?') && (tmp !='!')){
@@ -41,15 +44,18 @@ int main()
             aux[i] = '\0';
 
             insere_ArvBin(raiz,devolvePalavra(aux));
+
             i = -1;
         }
     }
 
 
-
+    tempo_f = clock();
+    printf("Arvore Binaria: %lu segundos \n", (tempo_f - tempo_i)/CLOCKS_PER_SEC);
     //preOrdem_ArvBin(raiz);
     emOrdem_ArvBin(raiz);
     //posOrdem_ArvBin(raiz);
+
 
     fclose(entrada);
     libera_ArvBin(raiz);

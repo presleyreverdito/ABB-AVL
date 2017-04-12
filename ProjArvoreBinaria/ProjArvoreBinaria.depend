@@ -27,7 +27,7 @@
 	"ArvoreBinaria.h"
 	<string.h>
 
-1491722584 
+1491722818 
 
 1491722818 source:c:\users\paulo vitor\documents\github\abb-avl\projarvorebinaria\arvorebinaria.c
 	<stdio.h>
@@ -39,8 +39,6 @@
 	<stdlib.h>
 	<stdio.h>
 
-1491722818 
-
 1491722584 source:c:\users\paulo vitor\documents\github\abb-avl\projarvorebinaria\main.c
 	<stdio.h>
 	<stdlib.h>
@@ -48,20 +46,22 @@
 	<string.h>
 	<locale.h>
 
-1491723559 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreBinaria/ArvoreBinaria.c
+1491761427 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreBinaria/ArvoreBinaria.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArvoreBinaria.h"
+	<time.h>
 
 1491723559 /home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreBinaria/ArvoreBinaria.h
 	<stdlib.h>
 	<stdio.h>
 
-1491723559 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreBinaria/main.c
+1491761558 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/GitHub/ABB-AVL/ProjArvoreBinaria/main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArvoreBinaria.h"
 	<string.h>
+	<time.h>
 	<locale.h>
 

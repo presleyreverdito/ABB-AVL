@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include<string.h>
 #include "ArvoreBinaria.h" //inclui os Protótipos
-
+#include <time.h>
 struct NO
 {
     int cont;
@@ -25,7 +25,7 @@ void libera_NO(struct NO* no)
         return;
     libera_NO(no->esq);
     libera_NO(no->dir);
-	free(no->info);
+    free(no->info);
     free(no);
     no = NULL;
 }
@@ -44,10 +44,10 @@ int consultaIncrementa_ArvBin(ArvBin *raiz, char str[])
     struct NO* atual = *raiz;
     while(atual != NULL)
     {
-       
+
         if(strcmp(str,atual->info) == 0)
         {
-			free(str);
+            free(str);
             atual->cont++;
             return 1;
         }
@@ -63,40 +63,39 @@ int insere_ArvBin(ArvBin* raiz, char str[])
     int comp;
     if(raiz == NULL)
         return 0;
-    if(consultaIncrementa_ArvBin(raiz, str) == 0){
-    struct NO* novo = malloc(sizeof(struct NO));
-
-    if(novo == NULL)
-        return 0;
-
-    
-    novo->info = str;
-    novo->cont = 1;
-    novo->dir = NULL;
-    novo->esq = NULL;
-
-    if(*raiz == NULL)
-        *raiz = novo;
-    else
+    if(consultaIncrementa_ArvBin(raiz, str) == 0)
     {
-        struct NO* atual = *raiz;
-        struct NO* ant = NULL;
-        while(atual != NULL)
-        {
-            ant = atual;
-            comp=strcmp(str,atual->info);
+        struct NO* novo = malloc(sizeof(struct NO));
+
+        if(novo == NULL)
+            return 0;
 
 
-            if(comp>0)
-                atual = atual->dir;
-            else
-                atual = atual->esq;
-        }
-        if(comp>0)
-            ant->dir = novo;
+        novo->info = str;
+        novo->cont = 1;
+        novo->dir = NULL;
+        novo->esq = NULL;
+
+        if(*raiz == NULL)
+            *raiz = novo;
         else
-            ant->esq = novo;
-    }
+        {
+            struct NO* atual = *raiz;
+            struct NO* ant = NULL;
+            while(atual != NULL)
+            {
+                ant = atual;
+                comp=strcmp(str,atual->info);
+                if(comp>0)
+                    atual = atual->dir;
+                else
+                    atual = atual->esq;
+            }
+            if(comp>0)
+                ant->dir = novo;
+            else
+                ant->esq = novo;
+        }
     }
     return 1;
 

@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1491936930 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/Arquivos Geeks/avl.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+	<string.h>
+
+1491931426 /home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/Arquivos Geeks/avl.h
+
+1491937122 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/Arquivos Geeks/main.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+	<time.h>
+	<locale.h>
+
+1491958080 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/Arquivos definitivos/Arquivos Geeks/main.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+	<time.h>
+	<locale.h>
+
+1491958103 /home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/Arquivos definitivos/Arquivos Geeks/avl.h
+	<stdio.h>
+	<stdlib.h>
+
+1491958103 source:/home/presley/Dropbox/ECA/ECA III Semestre/Estrutura de Dados/Trabalho 3/Arquivos definitivos/Arquivos Geeks/avl.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+	<string.h>
+
